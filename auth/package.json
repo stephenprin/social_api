@@ -37,7 +37,6 @@
     "@typescript-eslint/eslint-plugin": "^6.5.0",
     "@typescript-eslint/parser": "^6.5.0",
     "eslint": "^8.48.0",
-    "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.1.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.28.1",
@@ -46,5 +45,12 @@
     "prettier": "^3.0.3",
     "supertest": "^6.3.3",
     "ts-jest": "^29.1.1"
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "npm run prettier:fix",
+      "npm run lint",
+      "git add"
+    ]
   }
 }
